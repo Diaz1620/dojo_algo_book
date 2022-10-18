@@ -96,13 +96,90 @@
 // Swap String For Array Negative Values
 // Replace any negative array values with ​'Dojo'​.
 
-function swapNegatives(arr){
-    for(let num = 0; num < arr.length; num++){
-        if(arr[num] < 0){
-            arr[num] = "Dojo"
-        }
+// function swapNegatives(arr){
+//     for(let num = 0; num < arr.length; num++){
+//         if(arr[num] < 0){
+//             arr[num] = "Dojo"
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(swapNegatives([-1,2,-3,4,-5,6]))
+
+
+// Print Odds 1-255
+// Print all odd integers from 1 to 255.
+
+// function printOdds(){
+//     for(let num = 1; num <= 255; num+=2){
+//         console.log(num);
+//     }
+// }
+
+// printOdds()
+
+// Iterate and Print Array
+// Iterate through a given array, printing each value.
+
+// function printArray(arr){
+//     for(let num = 0; num < arr.length; num++){
+//         console.log(arr[num]);
+//     }
+// }
+
+// printArray([1,2,5,6,8,9])
+
+
+// Get and Print Average
+// Analyze an array’s values and print the average.
+
+// function getAvg(arr){
+//     let avg, sum=0;
+//     for(let num = 0; num < arr.length; num++){
+//         sum += arr[num]
+//     }
+//     avg = sum/arr.length
+//     console.log(avg);
+// }
+
+// getAvg([1,2,3,4,5,6,7,8,9])
+
+// Square the Values
+// Square each value in a given array, returning that same array with changed values.
+
+// function squareTheValues(arr){
+//     for(let num = 0; num < arr.length; num++){
+//         arr[num] = arr[num]**2
+//     }
+//     return arr
+// }
+
+// console.log(squareTheValues([1,2,3,4,5,6]));
+
+// Zero Out Negative Numbers
+// Return the given array, after setting any negative values to zero.
+
+// function zeroOutNegatives(arr){
+//     for(let num = 0; num < arr.length; num++){
+//         if(arr[num] < 0){
+//             arr[num] = 0
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(zeroOutNegatives([1,-5,-9,10,5,6,9]));
+
+// Shift Array Values
+// Given an array, move all values forward by one index, dropping the first and leaving a ​'0'​ value at the end.
+
+function shiftArray(arr){
+    for(let num = 0; num < arr.length-1; num++){
+        arr[num] = arr[num+1]
     }
+    arr[arr.length-1] = 0
     return arr
 }
 
-console.log(swapNegatives([-1,2,-3,4,-5,6]))
+console.log(shiftArray([1,2,3,4,5]));
