@@ -48,21 +48,68 @@
 
 // Second:​ Change your function to make a ​BetterThreesFives(start,end)​where ​start​ and ​end values are customizable. You can think of the above ​ThreesFives()​ function as BetterThreesFives(100,4000000)​.
 
-function betterThreesFives(x,y){
-    let sum = 0
-    for(let i = x; i <= y; i++){
-        if(i % 3 == 0 && i % 5 != 0){
-            sum += i
-        }
-        else if(i % 5 == 0 && i % 3 != 0){
-            sum += i
-        }
-        else{
-            continue
-        }
+// function betterThreesFives(x,y){
+//     let sum = 0
+//     for(let i = x; i <= y; i++){
+//         if(i % 3 == 0 && i % 5 != 0){
+//             sum += i
+//         }
+//         else if(i % 5 == 0 && i % 3 != 0){
+//             sum += i
+//         }
+//         else{
+//             continue
+//         }
+//     }
+//     console.log(sum);
+//     return sum
+// }
+
+// betterThreesFives(100, 4000000)
+
+
+// Generate Coin Change
+// Implement ​generateCoinChange(cents)​ that accepts a parameter for the number of cents, and computes how to represent that amount with the smallest number of coins. Console.log the result.
+
+function generateCoinChange(cents){
+    let quarters = 0, dimes = 0, nickles = 0, pennies = 0;
+    if(cents % 25 == 0){
+        quarters = cents/25
+        cents -= quarters*25
+        console.log(quarters, "quarter/s");
     }
-    console.log(sum);
-    return sum
+    else{
+        quarters = Math.floor(cents/25)
+        cents-=quarters*25
+        console.log(quarters, "quarter/s");
+    }
+    if(cents % 10 == 0){
+        dimes = cents / 10
+        cents -= dimes*10
+        console.log(dimes, "dime/s");
+    }
+    else{
+        dimes = Math.floor(cents/10)
+        cents -= dimes*10
+        console.log(dimes, "dime/s");
+    }
+    if(cents % 5 == 0){
+        nickles = cents/5
+        cents -= nickles*5
+        console.log(nickles, "nickles");
+    }
+    else{
+        nickles = Math.floor(cents/5)
+        cents -= nickles*5
+        console.log(nickles, "nickle/s");
+    }
+    console.log(cents, "penny/pennies");
+    
 }
 
-betterThreesFives(100, 4000000)
+generateCoinChange(237)
+
+
+
+
+
