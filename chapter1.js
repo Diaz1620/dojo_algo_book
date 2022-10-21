@@ -71,45 +71,88 @@
 // Generate Coin Change
 // Implement ​generateCoinChange(cents)​ that accepts a parameter for the number of cents, and computes how to represent that amount with the smallest number of coins. Console.log the result.
 
-function generateCoinChange(cents){
-    let quarters = 0, dimes = 0, nickles = 0, pennies = 0;
-    if(cents % 25 == 0){
-        quarters = cents/25
-        cents -= quarters*25
-        console.log(quarters, "quarter/s");
-    }
-    else{
-        quarters = Math.floor(cents/25)
-        cents-=quarters*25
-        console.log(quarters, "quarter/s");
-    }
-    if(cents % 10 == 0){
-        dimes = cents / 10
-        cents -= dimes*10
-        console.log(dimes, "dime/s");
-    }
-    else{
-        dimes = Math.floor(cents/10)
-        cents -= dimes*10
-        console.log(dimes, "dime/s");
-    }
-    if(cents % 5 == 0){
-        nickles = cents/5
-        cents -= nickles*5
-        console.log(nickles, "nickles");
-    }
-    else{
-        nickles = Math.floor(cents/5)
-        cents -= nickles*5
-        console.log(nickles, "nickle/s");
-    }
-    console.log(cents, "penny/pennies");
+// function generateCoinChange(cents){
+//     let quarters = 0, dimes = 0, nickles = 0, pennies = 0;
+//     if(cents % 25 == 0){
+//         quarters = cents/25
+//         cents -= quarters*25
+//         console.log(quarters, "quarter/s");
+//     }
+//     else{
+//         quarters = Math.floor(cents/25)
+//         cents-=quarters*25
+//         console.log(quarters, "quarter/s");
+//     }
+//     if(cents % 10 == 0){
+//         dimes = cents / 10
+//         cents -= dimes*10
+//         console.log(dimes, "dime/s");
+//     }
+//     else{
+//         dimes = Math.floor(cents/10)
+//         cents -= dimes*10
+//         console.log(dimes, "dime/s");
+//     }
+//     if(cents % 5 == 0){
+//         nickles = cents/5
+//         cents -= nickles*5
+//         console.log(nickles, "nickles");
+//     }
+//     else{
+//         nickles = Math.floor(cents/5)
+//         cents -= nickles*5
+//         console.log(nickles, "nickle/s");
+//     }
+//     console.log(cents, "penny/pennies");
     
+// }
+
+// generateCoinChange(237)
+
+
+// Statistics to Doubles
+// Implement a ‘die’ that randomly returns an integer between 1 and 6 inclusive. Roll a pair of these dice, tracking the statistics until doubles are rolled. Display the ​number of rolls​, ​min,​ ​max,​ and ​average​.
+
+var numRolls = 0
+var min = 0, max = 0, avg = 0
+var numRollsTillDouble = []
+
+function rollDie(){
+    // console.log(Math.floor(Math.random() * 6) + 1);
+    return Math.floor(Math.random() * 6) + 1
 }
 
-generateCoinChange(237)
+function rollDice(){
+    numRolls ++
+    let diceResults = [rollDie(), rollDie()]
+    console.log("Current rolls: ", numRolls);
+    console.log(diceResults);
+    if(diceResults[0] == diceResults[1]){
+        console.log("Number of rolls till double: ", numRolls);
+        numRollsTillDouble.push(numRolls)
+        if(min == 0){
+            min = numRolls
+        }
+        if(numRolls > max){
+            max = numRolls
+        }
+        else if(numRolls < min){
+            min = numRolls
+        }
+        // numRolls = 0
+    }
+        console.log("Minimum number of rolls for double so far: ", min);
+        console.log("Maximum number of rolls for double so far: ", max);
+        console.log("Rolls are now: ", numRolls);
+        return numRolls
+}
+// function diceStatistics(){
+//     let numRolls = count, min = 0, max = 0, avg = 0;
+//     if(rollDie()){
+//         console.log(numRolls);
+//     }
+// }
 
-
-
+rollDice()
 
 
