@@ -201,11 +201,23 @@
 // Implement the Fibonacci function, a famous mathematical equation that generates a numerical sequence such that each number is the sum of the previous two. The Fibonacci numbers at index 0 and 1, coincidentally, have values of 0 and 1. Your function should accept an argument of which Fibonacci number.
 // Examples: ​fibonacci(2)​ = 1, ​fibonacci(3)​ = 2, ​fibonacci(4)​ = 3, ​fibonacci(5)​ = 5, etc.
 
-function fib(num){
-    if(num == 0 || num == 1){
-        return num
-    }
-    return fib(num - 1) + fib(num - 2)
-}
+// function fib(num){
+//     if(num == 0 || num == 1){
+//         return num
+//     }
+//     return fib(num - 1) + fib(num - 2)
+// }
 
-console.log(fib(8));
+// console.log(fib(1));
+
+// Implement a function that accepts two non-negative integers as arguments. Function ​lastDigitAtoB(a, b)​ should return the last digit of the first number (a) raised to an exponent of the second number (b).
+// Examples: given ​(3, 4)​, you should return ​1​ (the last digit of 81: 3 * 3 * 3 * 3). Given ​(12, 5)​, return 2​ (the least significant digit of 248832, which is 12 * 12 * 12 * 12 * 12).
+
+function lastDigitAtoB(a,b){
+    let exponet = a ** b;
+    let numToString = exponet.toString().split('')
+    let realNum = numToString.map(Number)
+    return realNum[realNum.length - 1]
+}
+console.log(lastDigitAtoB(12,5));
+
