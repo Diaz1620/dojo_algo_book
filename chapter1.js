@@ -157,29 +157,29 @@
 // Sum To One Digit
 // Implement a function ​sumToOne(num)​ that, given a number, sums that number’s digits repeatedly until the sum is only one digit. Return thatfinalonedigitresult.
 
-function sumToOne(num){
-    let stringNum = num.toString().split('');
-    let realNum = stringNum.map(Number)
-    let sum = 0
-    if(num > 9){
-        for(let i = 0; i < realNum.length; i++){
-            sum += realNum[i]
-        }
-        if(sum > 9){
-            return sumToOne(sum)
-        }
-        else{
-            console.log("The total sum is now "+sum+ " and it is less than nine");
-            return sum
-        }
-    }
-    else{
-        // console.log("Num is now", num);
-        return num
-    }
-}
+// function sumToOne(num){
+//     let stringNum = num.toString().split('');
+//     let realNum = stringNum.map(Number)
+//     let sum = 0
+//     if(num > 9){
+//         for(let i = 0; i < realNum.length; i++){
+//             sum += realNum[i]
+//         }
+//         if(sum > 9){
+//             return sumToOne(sum)
+//         }
+//         else{
+//             console.log("The total sum is now "+sum+ " and it is less than nine");
+//             return sum
+//         }
+//     }
+//     else{
+//         // console.log("Num is now", num);
+//         return num
+//     }
+// }
 
-console.log(sumToOne(928));
+// console.log(sumToOne(928));
 
 // Internet answer that I don't think matches the description of how the function is supposed to work
 // function sumToOne(n){
@@ -201,4 +201,11 @@ console.log(sumToOne(928));
 // Implement the Fibonacci function, a famous mathematical equation that generates a numerical sequence such that each number is the sum of the previous two. The Fibonacci numbers at index 0 and 1, coincidentally, have values of 0 and 1. Your function should accept an argument of which Fibonacci number.
 // Examples: ​fibonacci(2)​ = 1, ​fibonacci(3)​ = 2, ​fibonacci(4)​ = 3, ​fibonacci(5)​ = 5, etc.
 
+function fib(num){
+    if(num == 0 || num == 1){
+        return num
+    }
+    return fib(num - 1) + fib(num - 2)
+}
 
+console.log(fib(8));
