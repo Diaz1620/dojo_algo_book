@@ -1,5 +1,5 @@
-Sigma
-Implement a function ​sigma(num)​ that, given a number, returns the sum of all positive integers from 1 up to number (inclusive). Ex.: ​sigma(3) = 6 (or 1+2+3); ​sigma(5)​ = 15 (or 1+2+3+4+5).
+// Sigma
+// Implement a function ​sigma(num)​ that, given a number, returns the sum of all positive integers from 1 up to number (inclusive). Ex.: ​sigma(3) = 6 (or 1+2+3); ​sigma(5)​ = 15 (or 1+2+3+4+5).
 
 function sigma(num){
     let sum = 0
@@ -11,8 +11,8 @@ function sigma(num){
 
 console.log(sigma(5));
 
-Factorial
-Write a function ​factorial(num)​ that, given a number, returns the product (multiplication) of all positive integers from 1 up to number (inclusive). For example, ​factorial(3)​ = 6 (or 1 * 2 * 3); factorial(5)​ = 120 (or 1 * 2 * 3 * 4 * 5).
+// Factorial
+// Write a function ​factorial(num)​ that, given a number, returns the product (multiplication) of all positive integers from 1 up to number (inclusive). For example, ​factorial(3)​ = 6 (or 1 * 2 * 3); factorial(5)​ = 120 (or 1 * 2 * 3 * 4 * 5).
 
 function factorial(num){
     let product = 1
@@ -24,8 +24,8 @@ function factorial(num){
 
 console.log(factorial(5));
 
-Threes and Fives
-Create function ​ThreesFives()​ that adds each value from 100 and 4000000 (inclusive) if that value is evenly divisible by 3 or 5 ​but not both​. Display the final sum in the console.
+// Threes and Fives
+// Create function ​ThreesFives()​ that adds each value from 100 and 4000000 (inclusive) if that value is evenly divisible by 3 or 5 ​but not both​. Display the final sum in the console.
 
 function threesFives() {
     let sum = 0
@@ -46,7 +46,7 @@ function threesFives() {
 console.log(threesFives());
 
 
-Second:​ Change your function to make a ​BetterThreesFives(start,end)​where ​start​ and ​end values are customizable. You can think of the above ​ThreesFives()​ function as BetterThreesFives(100,4000000)​.
+// Second:​ Change your function to make a ​BetterThreesFives(start,end)​where ​start​ and ​end values are customizable. You can think of the above ​ThreesFives()​ function as BetterThreesFives(100,4000000)​.
 
 function betterThreesFives(x,y){
     let sum = 0
@@ -68,8 +68,8 @@ function betterThreesFives(x,y){
 betterThreesFives(100, 4000000)
 
 
-Generate Coin Change
-Implement ​generateCoinChange(cents)​ that accepts a parameter for the number of cents, and computes how to represent that amount with the smallest number of coins. Console.log the result.
+// Generate Coin Change
+// Implement ​generateCoinChange(cents)​ that accepts a parameter for the number of cents, and computes how to represent that amount with the smallest number of coins. Console.log the result.
 
 function generateCoinChange(cents){
     let quarters = 0, dimes = 0, nickles = 0, pennies = 0;
@@ -110,8 +110,8 @@ function generateCoinChange(cents){
 generateCoinChange(237)
 
 
-Statistics to Doubles
-Implement a ‘die’ that randomly returns an integer between 1 and 6 inclusive. Roll a pair of these dice, tracking the statistics until doubles are rolled. Display the ​number of rolls​, ​min,​ ​max,​ and ​average​.
+// Statistics to Doubles
+// Implement a ‘die’ that randomly returns an integer between 1 and 6 inclusive. Roll a pair of these dice, tracking the statistics until doubles are rolled. Display the ​number of rolls​, ​min,​ ​max,​ and ​average​.
 
 var numRolls = 0
 var min = 0, max = 0, avg = 0
@@ -154,8 +154,8 @@ function diceStatistics(){
 }
 
 
-Sum To One Digit
-Implement a function ​sumToOne(num)​ that, given a number, sums that number’s digits repeatedly until the sum is only one digit. Return thatfinalonedigitresult.
+// Sum To One Digit
+// Implement a function ​sumToOne(num)​ that, given a number, sums that number’s digits repeatedly until the sum is only one digit. Return thatfinalonedigitresult.
 
 function sumToOne(num){
     let stringNum = num.toString().split('');
@@ -181,7 +181,7 @@ function sumToOne(num){
 
 console.log(sumToOne(928));
 
-Internet answer that I don't think matches the description of how the function is supposed to work
+// Internet answer that I don't think matches the description of how the function is supposed to work
 function sumToOne(n){
     let sum = 0
     while (n > 0 || sum > 9){
@@ -197,9 +197,9 @@ function sumToOne(n){
 
 console.log(sumToOne(928));
 
-Fibonacci
-Implement the Fibonacci function, a famous mathematical equation that generates a numerical sequence such that each number is the sum of the previous two. The Fibonacci numbers at index 0 and 1, coincidentally, have values of 0 and 1. Your function should accept an argument of which Fibonacci number.
-Examples: ​fibonacci(2)​ = 1, ​fibonacci(3)​ = 2, ​fibonacci(4)​ = 3, ​fibonacci(5)​ = 5, etc.
+// Fibonacci
+// Implement the Fibonacci function, a famous mathematical equation that generates a numerical sequence such that each number is the sum of the previous two. The Fibonacci numbers at index 0 and 1, coincidentally, have values of 0 and 1. Your function should accept an argument of which Fibonacci number.
+// Examples: ​fibonacci(2)​ = 1, ​fibonacci(3)​ = 2, ​fibonacci(4)​ = 3, ​fibonacci(5)​ = 5, etc.
 
 function fib(num){
     if(num == 0 || num == 1){
@@ -210,8 +210,8 @@ function fib(num){
 
 console.log(fib(1));
 
-Implement a function that accepts two non-negative integers as arguments. Function ​lastDigitAtoB(a, b)​ should return the last digit of the first number (a) raised to an exponent of the second number (b).
-Examples: given ​(3, 4)​, you should return ​1​ (the last digit of 81: 3 * 3 * 3 * 3). Given ​(12, 5)​, return 2​ (the least significant digit of 248832, which is 12 * 12 * 12 * 12 * 12).
+// Implement a function that accepts two non-negative integers as arguments. Function ​lastDigitAtoB(a, b)​ should return the last digit of the first number (a) raised to an exponent of the second number (b).
+// Examples: given ​(3, 4)​, you should return ​1​ (the last digit of 81: 3 * 3 * 3 * 3). Given ​(12, 5)​, return 2​ (the least significant digit of 248832, which is 12 * 12 * 12 * 12 * 12).
 
 function lastDigitAtoB(a,b){
     let exponet = a ** b;
@@ -227,3 +227,4 @@ function altLastDigitAtoB(a,b){
 }
 
 console.log(altLastDigitAtoB(12,5));
+
