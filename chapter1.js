@@ -242,6 +242,21 @@ function pushFront(arr, val){
 
 pushFront([2,3,4], 1)
 
+// PopFront
+// Given an array, ​remove and return the value ​at the beginning of the array. Do this without using any built-in array methods except ​pop()​.
+
+function popFront(arr){
+    let removed = arr[0]
+    for(let i = 0; i < arr.length - 1 ; i++){
+        arr[i] = arr[i+1]
+    }
+    arr.pop()
+    console.log(arr);
+    return removed
+}
+
+console.log(popFront([1,2,3,4]))
+
 
 
 
