@@ -258,6 +258,20 @@ function popFront(arr){
 console.log(popFront([1,2,3,4]))
 
 
+// InsertAt
+// Given an array, index, and additional value, ​insert the value into the array a​ t the given index. Do this without using built-in array methods. You can think of ​PushFront(arr,val)​ as equivalent to InsertAt(arr,0,val)​.
 
+function insertAt(arr, pos, val){
+    for(let i = arr.length; i >= 0; i--){
+        if(i == pos){
+            arr[i] = val
+            return arr
+        }
+        else {
+            arr[i] = arr[i-1]
+        }
+    }
+}
 
+console.log(insertAt([1,2,4,5,6,7], 2, 3))
 
